@@ -6,5 +6,5 @@ ReactDOM.render(
   <>
     <Routes />
   </>,
-  document.getElementById("root")
+  document.getElementById("eCommerce")
 );
