@@ -1,0 +1,28 @@
+{
+  "nav_category": [
+    {
+      "id": 0,
+      "content": "HOME"
+    },
+    {
+      "id": 1,
+      "content": "SHOP"
+    },
+    {
+      "id": 2,
+      "content": "PRODUCT"
+    },
+    {
+      "id": 3,
+      "content": "PAGES"
+    },
+    {
+      "id": 4,
+      "content": "BLOG"
+    },
+    {
+      "id": 5,
+      "content": "ELEMENTS"
+    }
+  ]
+}

@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
+import Nav from "../../components/Nav/Nav";
 
 const Main = () => {
   return (
     <Fragment>
-      <div></div>
+      <Nav />
     </Fragment>
   );
 };
