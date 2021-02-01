@@ -1,9 +1,8 @@
-import React, { Fragment } from "react";
-import styled from "styled-components";
+import React, { Fragment } from 'react';
+import styled from 'styled-components';
+import { media } from '../../../styles/CommonStyle';
 
 const NavCategories = ({ content, id }) => {
-  console.log(content);
-
   return (
     <Fragment>
       <Category>{content}</Category>
@@ -13,6 +12,12 @@ const NavCategories = ({ content, id }) => {
 
 export default NavCategories;
 
-const Category = styled.div`
-  margin-right: 30px;
+const Category = styled.section`
+  display: flex;
+  margin: 0px 14px;
+
+  ${media.lessThan('md')`
+    margin: 0px;
+    padding: 20px;
+  `}
 `;

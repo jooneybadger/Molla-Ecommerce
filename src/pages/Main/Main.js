@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import Nav from "../../components/Nav/Nav";
+import React, { Fragment } from 'react';
+import Nav from '../../components/Nav/Nav';
 
 const Main = () => {
   return (
