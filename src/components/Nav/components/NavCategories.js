@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import { media } from '../../../styles/CommonStyle';
+import { media, theme } from '../../../styles/CommonStyle';
 
 const NavCategories = ({ content, id }) => {
   return (

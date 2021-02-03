@@ -1,0 +1,16 @@
+{
+  "banner_items": [
+    {
+      "id": 0,
+      "img_url": "/images/banners/banner-1.jpg"
+    },
+    {
+      "id": 1,
+      "img_url": "/images/banners/banner-2.jpg"
+    },
+    {
+      "id": 2,
+      "img_url": "/images/banners/banner-3.jpg"
+    }
+  ]
+}

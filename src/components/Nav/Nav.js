@@ -20,8 +20,6 @@ const Nav = () => {
     setToggle(!toggle);
   };
 
-  console.log(toggle);
-
   return (
     <Fragment>
       <WrapNav>
@@ -42,7 +40,7 @@ const Nav = () => {
             <div className='price'>$772,00</div>
           </Dropdown>
           <Hamburger onClick={handleToggle}>
-            <i class='fa fa-bars' aria-hidden='true'></i>
+            <i className='fa fa-bars' aria-hidden='true'></i>
           </Hamburger>
         </Headers>
       </WrapNav>
@@ -82,7 +80,7 @@ const WrapLogo = styled.div`
 `;
 
 const Categories = styled.div`
-  display: ${(props) => (props.toggle ? 'flex' : 'none')};
+  display: ${(props) => (props.toggle ? 'none' : 'flex')};
   justify-content: center;
   width: 100%;
   font-family: 'PT serif', serif;
@@ -98,7 +96,7 @@ const Categories = styled.div`
 `;
 
 const Dropdown = styled.div`
-  display: ${(props) => (props.toggle ? 'flex' : 'none')};
+  display: ${(props) => (props.toggle ? 'none' : 'flex')};
   align-items: center;
   font-size: 20px;
   font-weight: bold;
