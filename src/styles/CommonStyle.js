@@ -49,6 +49,7 @@ export const media = generateMedia({
 
 export const theme = {
   fontColor: '#EFA287',
+  fontFamily: `'PT serif', serif`,
 };
 
 export default theme;
