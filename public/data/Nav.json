@@ -14,15 +14,11 @@
     },
     {
       "id": 3,
-      "content": "PAGES"
-    },
-    {
-      "id": 4,
       "content": "BLOG"
     },
     {
-      "id": 5,
-      "content": "ELEMENTS"
+      "id": 4,
+      "content": "SIGNUP"
     }
   ]
 }
