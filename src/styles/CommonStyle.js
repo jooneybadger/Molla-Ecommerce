@@ -65,6 +65,7 @@ export const color = {
   cyan: '#17a2b8',
   white: '#fff',
   gray: '#6c757d',
+  lightGray: 'rgba(0,0,0,0.1)',
   grayDark: '#343a40',
   primary: '#007bff',
   secondary: '#6c757d',
@@ -74,6 +75,7 @@ export const color = {
   danger: '#dc3545',
   light: '#f8f9fa',
   dark: '#343a40',
+  gold: '#CC9966',
 };
 
 export default theme;

@@ -4,8 +4,7 @@ import { media, theme } from '../../styles/CommonStyle';
 import { NAV_API } from '../../config';
 import { useHistory } from 'react-router-dom';
 import NavCategories from '../Nav/components/NavCategories';
-import ModalShop from './components/Modal/ModalShop';
-import ModalProduct from './components/Modal/ModalProduct';
+import Login from '../Nav/components/Login/Login';
 
 const Nav = (props) => {
   const history = useHistory();
@@ -13,6 +12,8 @@ const Nav = (props) => {
   const [toggle, setToggle] = useState(false);
   const [isModalShop, setIsModalShop] = useState(false);
   const [isModalProduct, setIsModalProduct] = useState(false);
+  const [login, setLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
 
   useEffect(() => {
     fetch(NAV_API, {
@@ -28,19 +29,38 @@ const Nav = (props) => {
 
   const handleModalShop = () => {
     setIsModalShop(!isModalShop);
+    setIsModalProduct(false);
   };
 
   const handleModalProduct = () => {
     setIsModalProduct(!isModalProduct);
-    console.log(isModalProduct);
+    setIsModalShop(false);
+  };
+
+  const openLogin = () => {
+    setLogin(!login);
+    closeModal();
+    console.log(login);
+  };
+
+  const closeLogin = () => {
+    setLogin(false);
+    console.log(login);
+  };
+
+  const closeModal = () => {
+    setIsModalProduct(false);
+    setIsModalShop(false);
   };
 
   const goToMain = () => {
     history.push('/');
+    closeModal();
   };
 
   return (
     <Fragment>
+      <Login closeLogin={closeLogin} login={login} />
       <WrapNav>
         <Headers>
           <WrapLogo onClick={goToMain}>
@@ -49,8 +69,11 @@ const Nav = (props) => {
           <Categories toggle={toggle}>
             <NavCategories
               isModalShop={isModalShop}
+              isModalProduct={isModalProduct}
               handleModalShop={handleModalShop}
               handleModalProduct={handleModalProduct}
+              openLogin={openLogin}
+              closeModal={closeModal}
               goToMain={goToMain}
             />
           </Categories>
@@ -58,13 +81,11 @@ const Nav = (props) => {
             <i className='fas fa-search'></i>
             <i className='far fa-heart'></i>
             <i className='fas fa-shopping-cart'></i>
-            <div className='price'>$772,00</div>
+            {isLogin ? <div className='price'>$772,00</div> : ''}
           </Dropdown>
           <Hamburger onClick={handleToggle}>
             <i className='fa fa-bars' aria-hidden='true'></i>
           </Hamburger>
-          <ModalShop isModalShop={isModalShop} />
-          <ModalProduct />
         </Headers>
       </WrapNav>
     </Fragment>
@@ -82,8 +103,7 @@ const Headers = styled.section`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  width: 1188px;
-  height: 64px;
+  width: 1280px;
 
   ${media.lessThan('md')`
     flex-direction: column;
@@ -110,16 +130,13 @@ const WrapLogo = styled.div`
 `;
 
 const Categories = styled.div`
-  display: ${(props) => (props.toggle ? 'none' : 'flex')};
+  display: flex;
   justify-content: center;
   width: 100%;
-  /* font-family: 'PT serif', serif; */
   font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #010909;
 
   ${media.lessThan('md')`
+    display: ${(props) => (props.toggle ? 'flex' : 'none')};
     flex-direction: column;
     align-items: center;
     padding: 20px 10px;
@@ -129,19 +146,17 @@ const Categories = styled.div`
 const Dropdown = styled.div`
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
   cursor: pointer;
 
   i {
-    font-size: 24px;
     margin-right: 30px;
   }
 
   .fa-heart {
     color: red;
     font-weight: bold;
-    font-size: 25px;
   }
 
   .fa-shopping-cart {
@@ -149,11 +164,12 @@ const Dropdown = styled.div`
   }
 
   .price {
-    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 18px;
   }
 
   ${media.lessThan('md')`
-    display: ${(props) => (props.toggle ? 'none' : 'flex')};
+    display: ${(props) => (props.toggle ? 'flex' : 'none')};
     justify-content: center;
     width:100%;
     margin-top: 20px;
