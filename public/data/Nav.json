@@ -20,5 +20,101 @@
       "id": 4,
       "content": "SIGNUP"
     }
+  ],
+  "modal_shop": {
+    "store": [
+      {
+        "id": 0,
+        "branch": "Gangnam"
+      },
+      {
+        "id": 1,
+        "branch": "Hongdae"
+      },
+      {
+        "id": 2,
+        "branch": "Hannam"
+      },
+      {
+        "id": 3,
+        "branch": "Sinsa"
+      },
+      {
+        "id": 4,
+        "branch": "Chugdam"
+      }
+    ],
+    "intro": [
+      {
+        "id": 0,
+        "content": "About"
+      },
+      {
+        "id": 1,
+        "content": "Members"
+      }
+    ],
+    "location": [
+      {
+        "id": 0,
+        "content": "Location"
+      },
+      {
+        "id": 1,
+        "content": "Head Office"
+      }
+    ],
+    "account": [
+      {
+        "id": 0,
+        "content": "SignIn"
+      },
+      {
+        "id": 1,
+        "content": "Register"
+      },
+      {
+        "id": 2,
+        "content": "My Account"
+      },
+      {
+        "id": 3,
+        "content": "Wish List"
+      },
+      {
+        "id": 4,
+        "content": "Cart"
+      }
+    ]
+  },
+  "modal_category": [
+    {
+      "id": 0,
+      "content": "Top"
+    },
+    {
+      "id": 1,
+      "content": "Bottom"
+    },
+    {
+      "id": 2,
+      "content": "Outer"
+    },
+    {
+      "id": 3,
+      "content": "Accs"
+    },
+    {
+      "id": 4,
+      "content": "Bags"
+    },
+    {
+      "id": 5,
+      "content": "Jewels"
+    },
+    {
+      "id": 6,
+      "content": "Sale"
+    }
   ]
 }

@@ -1,30 +1,49 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { media, theme, color } from '../../../styles/CommonStyle';
+import { NAV_API } from '../../../config';
+import ModalShop from '../components/Modal/ModalShop';
+import ModalProduct from '../components/Modal/ModalProduct';
 
-const NavCategories = ({ isModalShop, handleModalShop, goToMain, handleModalProduct }) => {
+const NavCategories = ({
+  isModalShop,
+  isModalProduct,
+  handleModalShop,
+  handleModalProduct,
+  openLogin,
+  closeModal,
+  goToMain,
+}) => {
+  const [modalData, setModalData] = useState([]);
+
+  useEffect(() => {
+    fetch(NAV_API, {
+      method: 'GET',
+    })
+      .then((res) => res.json())
+      .then((res) => setModalData(res));
+  }, []);
+
   return (
     <Fragment>
       <Category>
-        <span onClick={() => goToMain()} className='home'>
-          HOME
-        </span>
+        <Content onClick={() => goToMain()}>HOME</Content>
       </Category>
-      <Category>
-        <span onClick={() => handleModalShop()} className='content'>
+      <Category onClick={() => handleModalShop()}>
+        <Content>
           SHOP
-        </span>
+          <ModalShop modalShop={modalData.modal_shop} isModalShop={isModalShop} />
+        </Content>
+      </Category>
+      <Category onClick={() => handleModalProduct()}>
+        <Content>PRODUCT</Content>
+        <ModalProduct modalProduct={modalData.modal_category} isModalProduct={isModalProduct} />
       </Category>
       <Category>
-        <span onClick={() => handleModalProduct()} className='content'>
-          PRODUCT
-        </span>
+        <Content onClick={closeModal}>BLOG</Content>
       </Category>
       <Category>
-        <span className='content'>BLOG</span>
-      </Category>
-      <Category>
-        <span className='content'>SIGNUP</span>
+        <Content onClick={openLogin}>LOGIN</Content>
       </Category>
     </Fragment>
   );
@@ -37,7 +56,6 @@ const Category = styled.section`
   height: 64px;
   padding: 23px 25px;
   position: relative;
-  font-size: 20px;
 
   &:before {
     content: '';
@@ -70,4 +88,13 @@ const Category = styled.section`
     margin: 0px;
     padding: 20px;
   `}
+`;
+
+const Content = styled.div`
+  position: relative;
+`;
+
+const CloseButton = styled.div`
+  position: absolute;
+  cursor: pointer;
 `;

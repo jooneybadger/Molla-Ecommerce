@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { theme } from '../../../../styles/CommonStyle';
 
 const Banner = ({ banner }) => {
-  console.log(banner.img_url);
   return (
     <Fragment>
       <WrapBanner>
