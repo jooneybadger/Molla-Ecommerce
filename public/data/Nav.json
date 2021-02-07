@@ -90,31 +90,31 @@
   "modal_category": [
     {
       "id": 0,
-      "content": "Top"
+      "content": "All"
     },
     {
       "id": 1,
-      "content": "Bottom"
+      "content": "Top"
     },
     {
       "id": 2,
-      "content": "Outer"
+      "content": "Bottom"
     },
     {
       "id": 3,
-      "content": "Accs"
+      "content": "Outer"
     },
     {
       "id": 4,
-      "content": "Bags"
+      "content": "Accs"
     },
     {
       "id": 5,
-      "content": "Jewels"
+      "content": "Bags"
     },
     {
       "id": 6,
-      "content": "Sale"
+      "content": "On Sale"
     }
   ]
 }
