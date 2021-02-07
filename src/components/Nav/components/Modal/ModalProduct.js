@@ -34,6 +34,11 @@ const WrapModal = styled.div`
   left: -15px;
   background-color: ${color.white};
   z-index: 10000;
+
+  ${media.lessThan('md')`
+    left: -133px;
+    background-color: ${color.light};
+  `}
 `;
 
 const ModalBox = styled.div`
@@ -51,6 +56,16 @@ const WrapLeft = styled.div`
     margin-bottom: 20px;
     color: ${color.orange};
   }
+
+  ${media.lessThan('md')`
+    padding: 32px;
+    width: 400px;
+
+    h1 {
+      font-size: 20px;
+      
+    }
+  `}
 `;
 
 const Category = styled.div`
@@ -76,12 +91,20 @@ const Category = styled.div`
     visibility: visible;
     transform: scaleX(1);
   }
+
+  ${media.lessThan('md')`
+    font-size: 16px;
+  `}
 `;
 
 const WrapRight = styled.div`
   img {
     height: 100%;
   }
+
+  ${media.lessThan('md')`
+    display:none;
+  `}
 `;
 
 const CloseButton = styled.div`
@@ -91,6 +114,11 @@ const CloseButton = styled.div`
   font-size: 20px;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.5);
+
+  ${media.lessThan('md')`
+    right: 20px;  
+    font-size: 18px;
+  `}
 
   &:hover {
     transform: scale(1.2);
