@@ -77,6 +77,7 @@ export const color = {
   dark: '#343a40',
   gold: '#CC9966',
   toneDownBlack: '#222222',
+  babypink: '#EEA287',
 };
 
 export default theme;

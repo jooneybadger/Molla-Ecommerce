@@ -179,7 +179,7 @@ const WrapInsta = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1280px;
+  margin-top: 50px;
 
   h1 {
     margin: 30px 0;
@@ -197,6 +197,7 @@ const WrapInsta = styled.section`
 const Instagram = styled.section`
   display: flex;
   justify-content: center;
+  width: 1280px;
   .image {
     position: relative;
 

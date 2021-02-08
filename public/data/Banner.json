@@ -12,5 +12,31 @@
       "id": 2,
       "img_url": "/images/banners/banner-3.jpg"
     }
+  ],
+  "white_banners": [
+    {
+      "id": 0,
+      "img_url": "/images/whiteBanner/1.png"
+    },
+    {
+      "id": 1,
+      "img_url": "/images/whiteBanner/2.png"
+    },
+    {
+      "id": 2,
+      "img_url": "/images/whiteBanner/3.png"
+    },
+    {
+      "id": 3,
+      "img_url": "/images/whiteBanner/4.png"
+    },
+    {
+      "id": 4,
+      "img_url": "/images/whiteBanner/5.png"
+    },
+    {
+      "id": 5,
+      "img_url": "/images/whiteBanner/6.png"
+    }
   ]
 }

@@ -82,7 +82,6 @@ const Login = ({ closeLogin, login }) => {
     });
   };
 
-  console.log(emailValue, passwordValue);
   return (
     <Fragment>
       <Background login={login}>
@@ -157,23 +156,23 @@ const Login = ({ closeLogin, login }) => {
             <WrapSocial>
               {pickLogin ? (
                 <SocialButton>
-                  <img src='https://lh3.googleusercontent.com/proxy/6o2Sl6TR-Z0H0K19B9Yx2CmHLi8Pbpr6FMY-m3MEnnL4VH_bqUwOfNXRY_vkw1QedsEqO642cBDLAeOXy47FVRIkS_17GyxJHY7XMMrbH685JjthaRYJ2y3kIajd-zpZQhcKk-yO3Un-WfxHYJj8kQGNhIw23qkCy824IHLkUnGNK6Pb1Tn5zXsWU-7fCbag1btf06bQWaHBfaFDqNuA_ljqibf7BgATg_RUOVA4zCUAnWgOlZRiSHVtrAatPDfECRDWsWkE812u6j8yHL1zrej2a2IaTte3wY4' />
+                  <img src='/images/Kakao-Logo.png' />
                   Login with Kakao
                 </SocialButton>
               ) : (
                 <SocialButton>
-                  <img src='https://lh3.googleusercontent.com/proxy/6o2Sl6TR-Z0H0K19B9Yx2CmHLi8Pbpr6FMY-m3MEnnL4VH_bqUwOfNXRY_vkw1QedsEqO642cBDLAeOXy47FVRIkS_17GyxJHY7XMMrbH685JjthaRYJ2y3kIajd-zpZQhcKk-yO3Un-WfxHYJj8kQGNhIw23qkCy824IHLkUnGNK6Pb1Tn5zXsWU-7fCbag1btf06bQWaHBfaFDqNuA_ljqibf7BgATg_RUOVA4zCUAnWgOlZRiSHVtrAatPDfECRDWsWkE812u6j8yHL1zrej2a2IaTte3wY4' />
+                  <img src='/images/Kakao-Logo.png' />
                   Register with Kakao
                 </SocialButton>
               )}
               {pickLogin ? (
                 <SocialButton>
-                  <img src='https://www.dtl.coventry.domains/wp-content/uploads/2020/07/Google-Logo.png' />
+                  <img src='/images/Google-Logo.png' />
                   Login with Google
                 </SocialButton>
               ) : (
                 <SocialButton>
-                  <img src='https://www.dtl.coventry.domains/wp-content/uploads/2020/07/Google-Logo.png' />
+                  <img src='/images/Google-Logo.png' />
                   Register with Google
                 </SocialButton>
               )}

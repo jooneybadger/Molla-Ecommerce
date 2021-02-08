@@ -1,14 +1,14 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { theme } from '../../../../styles/CommonStyle';
-import { BAN1_API } from '../../../../config';
+import { BAN_API } from '../../../../config';
 import Banner from './Banner';
 
 const Banners = () => {
   const [banners, setBanners] = useState([]);
 
   useEffect(() => {
-    fetch(BAN1_API, {
+    fetch(BAN_API, {
       method: 'GET',
     })
       .then((res) => res.json())
