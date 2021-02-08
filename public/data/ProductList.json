@@ -1,0 +1,44 @@
+{
+  "main_list": [
+    {
+      "id": 0,
+      "img_url": "/images/products/product-1-1.jpg",
+      "img_url_hovered": "/images/products/product-1-2.jpg",
+      "category": "Outer",
+      "name": "Denim jacket",
+      "sale": "onSale",
+      "top_rated": "top",
+      "price": 50000
+    },
+    {
+      "id": 1,
+      "img_url": "/images/products/product-2-1.jpg",
+      "img_url_hovered": "/images/products/product-2-2.jpg",
+      "category": "Shoes",
+      "name": "Sandals",
+      "sale": "onSale",
+      "top_rated": "",
+      "price": 25000
+    },
+    {
+      "id": 2,
+      "img_url": "/images/products/product-3-1.jpg",
+      "img_url_hovered": "/images/products/product-3-2.jpg",
+      "category": "Top",
+      "name": "Printed sweatshirt",
+      "sale": "onSale",
+      "top_rated": "",
+      "price": 40000
+    },
+    {
+      "id": 3,
+      "img_url": "/images/products/product-4-1.jpg",
+      "img_url_hovered": "/images/products/product-4-2.jpg",
+      "category": "Bottom",
+      "name": "Linen-blend pants",
+      "sale": "",
+      "top_rated": "top",
+      "price": 30000
+    }
+  ]
+}

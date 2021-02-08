@@ -106,14 +106,18 @@
     },
     {
       "id": 4,
-      "content": "Accs"
+      "content": "Shoes"
     },
     {
       "id": 5,
-      "content": "Bags"
+      "content": "Accs"
     },
     {
       "id": 6,
+      "content": "Bags"
+    },
+    {
+      "id": 7,
       "content": "On Sale"
     }
   ]

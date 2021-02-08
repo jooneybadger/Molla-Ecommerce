@@ -17,7 +17,7 @@ const ModalProduct = ({ isModalProduct, modalProduct }) => {
             <img src='/images/instagram/1.jpg' alt='' />
           </WrapRight>
           <CloseButton>
-            <i class='fas fa-times'></i>
+            <i className='fas fa-times'></i>
           </CloseButton>
         </ModalBox>
       </WrapModal>

@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import { media, theme } from '../../styles/CommonStyle';
+import { media, theme, color } from '../../styles/CommonStyle';
 import Slider from 'react-slick';
 import Banners from './components/Banners/Banners';
+import WhiteBanners from './components/WhiteBanners/WhiteBanners';
+import Products from './components/Products/Products';
 import Footer from '../../components/Footer/Footer';
 
 const Main = () => {
@@ -36,6 +38,8 @@ const Main = () => {
         </StyledSlider>
       </Advertise>
       <Banners />
+      <WhiteBanners />
+      <Products />
       <Footer />
     </Fragment>
   );
@@ -72,5 +76,3 @@ const StyledSlider = styled(Slider)`
     }
   }
 `;
-
-const Container = styled.div``;
