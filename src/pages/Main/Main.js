@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { media, theme } from '../../styles/CommonStyle';
 import Slider from 'react-slick';
 import Banners from './components/Banners/Banners';
+import Footer from '../../components/Footer/Footer';
 
 const Main = () => {
   const settings = {
@@ -35,6 +36,7 @@ const Main = () => {
         </StyledSlider>
       </Advertise>
       <Banners />
+      <Footer />
     </Fragment>
   );
 };
