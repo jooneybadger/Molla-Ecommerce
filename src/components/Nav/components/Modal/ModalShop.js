@@ -60,6 +60,17 @@ const WrapModal = styled.div`
     margin-bottom: 16px;
     color: ${color.orange};
   }
+
+  ${media.lessThan('md')`
+    left: -175px;
+    background-color: ${color.light};  
+    padding: 32px;
+
+    h1{
+      font-size: 20px;
+      margin-bottom : 12px;
+    }
+  `}
 `;
 
 const ModalBox = styled.div`
@@ -82,6 +93,11 @@ const StoreList = styled.div`
   color: ${color.gray};
   font-size: 14px;
   position: relative;
+
+  ${media.lessThan('md')`
+    padding: 6px 4px;
+    font-size: 12px;
+  `}
 
   &:before {
     content: '';

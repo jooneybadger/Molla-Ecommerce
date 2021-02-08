@@ -61,7 +61,26 @@ const Login = ({ closeLogin, login }) => {
     });
   };
 
-  const requestRegister = () => {};
+  const requestRegister = () => {
+    fetch(`${NAV_API}`, {
+      method: 'POST',
+      body: JSON.stringify({
+        email: emailValue,
+        password: passwordValue,
+        first_name: firstNameValue,
+        last_name: lastNameValue,
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          if (res.massage === 'SUCCESS') {
+            alert('Welcome');
+            setPickLogin(true);
+          } else {
+            alert('Fail');
+          }
+        }),
+    });
+  };
 
   console.log(emailValue, passwordValue);
   return (
@@ -80,14 +99,6 @@ const Login = ({ closeLogin, login }) => {
             </WrapRegister>
           </WrapHeader>
           <WrapBody>
-            {/* <WrapInput>
-              {pickLogin ? <h1>Username or email address *</h1> : <h1>Enter email address*</h1>}
-              <EmailInput email={email} onChange={handleEmailValue}></EmailInput>
-            </WrapInput>
-            <WrapInput>
-              {pickLogin ? <h1>Password*</h1> : <h1> Enter your password*</h1>}
-              <PasswordInput password={password} onChange={handlePwValue}></PasswordInput>
-            </WrapInput> */}
             {pickLogin ? (
               <>
                 <WrapInput>
