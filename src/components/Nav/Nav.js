@@ -11,7 +11,7 @@ const Nav = (props) => {
   const [categories, SetCategories] = useState();
   const [toggle, setToggle] = useState(false);
   const [isModalShop, setIsModalShop] = useState(false);
-  const [isModalProduct, setIsModalProduct] = useState(false);
+  // const [isModalProduct, setIsModalProduct] = useState(false);
   const [login, setLogin] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
 
@@ -29,12 +29,13 @@ const Nav = (props) => {
 
   const handleModalShop = () => {
     setIsModalShop(!isModalShop);
-    setIsModalProduct(false);
+    // setIsModalProduct(false);
   };
 
   const handleModalProduct = () => {
-    setIsModalProduct(!isModalProduct);
+    // setIsModalProduct(!isModalProduct);
     setIsModalShop(false);
+    history.push('/lists');
   };
 
   const openLogin = () => {
@@ -49,7 +50,7 @@ const Nav = (props) => {
   };
 
   const closeModal = () => {
-    setIsModalProduct(false);
+    // setIsModalProduct(false);
     setIsModalShop(false);
   };
 
@@ -69,7 +70,7 @@ const Nav = (props) => {
           <Categories toggle={toggle}>
             <NavCategories
               isModalShop={isModalShop}
-              isModalProduct={isModalProduct}
+              // isModalProduct={isModalProduct}
               handleModalShop={handleModalShop}
               handleModalProduct={handleModalProduct}
               openLogin={openLogin}
